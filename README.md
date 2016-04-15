@@ -42,7 +42,7 @@ mod "puppet-download_file",  '1.2.1'
 
 mod 'profile_dotnet',
   :git => 'https://github.com/firechiefs/profile_dotnet',
-  :ref => '1.0.0'
+  :ref => '1.0.2'
 ```
 #### Manifests:
 ```
