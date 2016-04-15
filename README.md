@@ -40,6 +40,10 @@ puppet module install puppet-download_file
 mod "puppetlabs-reboot",     '1.2.1'
 mod "puppet-download_file",  '1.2.1'
 
+mod 'validation_script',
+  :git => 'https://github.com/firechiefs/validation_script',
+  :ref => '1.0.0'
+
 mod 'profile_dotnet',
   :git => 'https://github.com/firechiefs/profile_dotnet',
   :ref => '1.0.3'

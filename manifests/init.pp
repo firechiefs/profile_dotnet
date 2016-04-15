@@ -57,7 +57,7 @@ class profile_dotnet {
 
   # VALIDATION CODE:
   # --> MODIFY VARIABLES BELOW:
-  $profile_name    = 'dotnet'           # set to profile name
+  $profile_name    = 'profile_dotnet'           # set to profile name
   $validation_data = $dotnet[release] # set to data you'd like to validate
 
   # Puppet custom define type
