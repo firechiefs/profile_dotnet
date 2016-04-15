@@ -47,6 +47,6 @@ mod 'profile_dotnet',
 #### Manifests:
 ```
 class role::*rolename* {
-  include profile_reboot
+  include profile_dotnet
 }
 ```
