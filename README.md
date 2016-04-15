@@ -31,6 +31,7 @@ profile::dotnet:
 ## MODULE DEPENDENCIES:
 
 puppet module install puppetlabs-reboot
+puppet module install puppet-download_file
 
 ## USAGE:
 
@@ -39,8 +40,8 @@ puppet module install puppetlabs-reboot
 mod "puppetlabs-reboot",     '1.2.1'
 mod "puppet-download_file",  '1.2.1'
 
-mod 'profile_reboot',
-  :git => 'https://github.com/firechiefs/profile_reboot',
+mod 'profile_dotnet',
+  :git => 'https://github.com/firechiefs/profile_dotnet',
   :ref => '1.0.0'
 ```
 #### Manifests:
