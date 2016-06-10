@@ -9,10 +9,10 @@ global::repo_url: <repository url>
 global::temp_directory.${::osfamily}
 
 profile::dotnet:
-  version: <version of .net>
-  release: <release number>
-  repo_path: <specific uri in your repo>
-  installer: <installation executable>
+  version: <version of .net (string)>
+  release: <release number (integer)>
+  repo_path: <specific uri in your repo (string)>
+  installer: <installation executable (string)>
 ```
 ## HIERA EXAMPLE:
 ```
@@ -23,7 +23,7 @@ global::temp_directory:
 
 profile::dotnet:
   version: '4.5.2'
-  release: '379893'
+  release: 379893
   repo_path: 'packages/windows/net/'
   installer: 'NDP452-KB2901907-x86-x64-AllOS-ENU.exe'
 ```
