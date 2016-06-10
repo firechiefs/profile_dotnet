@@ -37,7 +37,7 @@ class profile_dotnet {
   # PUPPET CODE:
 
   # check if local version matches hiera lookup
-  if( $::dotnet4_release != $dotnet[release] ) {
+  if( $::dotnet4_release < $dotnet[release] ) {
     # stage .NET4 installer if local version does not match heira lookup
     download_file { $dotnet[version]:
       url                   =>
