@@ -51,14 +51,14 @@ class profile_dotnet {
     } ~> # reboot and log message only if exec resource executed
     reboot { $dotnet[version]:
       message => "Rebooting after .NET ${dotnet[version]} install",
-      apply   => finished, # reboot only after puppet run finishes
+      apply   => immediately, # reboot only after install finishes
     }
   }
 
   # VALIDATION CODE:
   # --> MODIFY VARIABLES BELOW:
   $profile_name    = 'profile_dotnet'           # set to profile name
-  $validation_data = $dotnet # set to data you'd like to validate
+  $validation_data = $dotnet[version] # set to data you'd like to validate
 
   # Puppet custom define type
   # documented in: site/validation_script/manifests/init.pp
