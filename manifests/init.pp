@@ -35,9 +35,9 @@ class profile_dotnet {
   validate_hash($dotnet)
 
   # PUPPET CODE:
-
+  $rel = 0 + $::dotnet4_release # convert to integer
   # check if local version matches hiera lookup
-  if( $::dotnet4_release < $dotnet[release] ) {
+  if( $rel < $dotnet[release] ) {
     # stage .NET4 installer if local version does not match heira lookup
     download_file { $dotnet[version]:
       url                   =>
